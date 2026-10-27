@@ -1,0 +1,12 @@
+@import './vars.css';
+
+button {
+  touch-action: manipulation;
+}
+
+:root {
+  color: var(--neutral-8);
+  background: var(--neutral-2);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}

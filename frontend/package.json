@@ -1,0 +1,21 @@
+{
+  "name": "@exhibition-screens/frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev --watch",
+    "build": "npm run typecheck && electron-vite build",
+    "start": "electron-vite preview --skipBuild",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
+  },
+  "devDependencies": {
+    "@exhibition-screens/shared": "0.1.0",
+    "@types/node": "^24.19.2",
+    "electron": "^44.7.0",
+    "electron-vite": "^5.0.0",
+    "typescript": "^7.0.2",
+    "vite": "^7.3.7"
+  }
+}

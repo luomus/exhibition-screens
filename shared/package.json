@@ -1,0 +1,19 @@
+{
+  "name": "@exhibition-screens/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "types": "./src/model.ts",
+  "exports": {
+    ".": {
+      "types": "./src/model.ts"
+    }
+  },
+  "scripts": {
+    "build": "npm run typecheck",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
