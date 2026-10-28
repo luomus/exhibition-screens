@@ -1,0 +1,190 @@
+[
+  {
+    "info": {
+      "title": {
+        "fi": "Suomen metsät",
+        "sv": "Finlands skogar",
+        "en": "Finnish forests"
+      },
+      "description": {
+        "fi": "Tutustu metsien kasveihin, eläimiin ja vuodenaikojen vaihteluun.",
+        "sv": "Upptäck skogens växter, djur och skiftande årstider.",
+        "en": "Explore forest plants, animals, and the changing seasons."
+      },
+      "qrDescription": {
+        "fi": "Skannaa koodi ja jatka metsäretkeä puhelimellasi.",
+        "sv": "Skanna koden och fortsätt skogsturen på din telefon.",
+        "en": "Scan the code to continue your forest walk on your phone."
+      },
+      "qrUrl": {
+        "fi": "https://example.com/fi/forests",
+        "sv": "https://example.com/sv/forests",
+        "en": "https://example.com/en/forests"
+      }
+    },
+    "species": [
+      {
+        "hero": {
+          "_tag": "img",
+          "url": "media/brown-bear.svg"
+        },
+        "vernacularName": {
+          "fi": "Karhu",
+          "sv": "Brunbjörn",
+          "en": "Brown bear"
+        },
+        "scientificName": {
+          "fi": "Ursus arctos",
+          "sv": "Ursus arctos",
+          "en": "Ursus arctos"
+        },
+        "description": {
+          "fi": "Karhu etsii metsästä marjoja ja muuta ravintoa.",
+          "sv": "Brunbjörnen söker efter bär och annan föda i skogen.",
+          "en": "The brown bear searches the forest for berries and other food."
+        }
+      }
+    ]
+  },
+  {
+    "info": {
+      "title": {
+        "fi": "Elämää Itämeressä",
+        "sv": "Livet i Östersjön",
+        "en": "Life in the Baltic Sea"
+      },
+      "description": {
+        "fi": "Sukella pinnan alle ja tutustu Itämeren ainutlaatuiseen luontoon.",
+        "sv": "Dyk under ytan och upptäck Östersjön unika natur.",
+        "en": "Dive beneath the surface and discover the unique nature of the Baltic Sea."
+      },
+      "qrDescription": {
+        "fi": "Skannaa koodi ja tutustu meren lajeihin.",
+        "sv": "Skanna koden och lär känna havets arter.",
+        "en": "Scan the code to discover the species of the sea."
+      },
+      "qrUrl": {
+        "fi": "https://example.com/fi/baltic-sea",
+        "sv": "https://example.com/sv/baltic-sea",
+        "en": "https://example.com/en/baltic-sea"
+      }
+    },
+    "species": [
+      {
+        "hero": {
+          "_tag": "video",
+          "url": "media/grey-seal.webm"
+        },
+        "vernacularName": {
+          "fi": "Harmaahylje",
+          "sv": "Gråsäl",
+          "en": "Grey seal"
+        },
+        "scientificName": {
+          "fi": "Halichoerus grypus",
+          "sv": "Halichoerus grypus",
+          "en": "Halichoerus grypus"
+        },
+        "description": {
+          "fi": "Harmaahylje ui Itämeressä ja lepää saariston luodoilla.",
+          "sv": "Gråsälen simmar i Östersjön och vilar på skärgårdens kobbar.",
+          "en": "The grey seal swims in the Baltic Sea and rests on rocky islets."
+        }
+      }
+    ]
+  },
+  {
+    "info": {
+      "title": {
+        "fi": "Soiden salaisuudet",
+        "sv": "Våtmarkernas hemligheter",
+        "en": "Secrets of the wetlands"
+      },
+      "description": {
+        "fi": "Löydä soiden linnut, hyönteiset ja pienet kasvit.",
+        "sv": "Upptäck våtmarkernas fåglar, insekter och små växter.",
+        "en": "Discover the birds, insects, and tiny plants of the wetlands."
+      },
+      "qrDescription": {
+        "fi": "Skannaa koodi ja lähde virtuaaliselle suoretkelle.",
+        "sv": "Skanna koden och följ med på en virtuell våtmarkstur.",
+        "en": "Scan the code to take a virtual wetland tour."
+      },
+      "qrUrl": {
+        "fi": "https://example.com/fi/wetlands",
+        "sv": "https://example.com/sv/wetlands",
+        "en": "https://example.com/en/wetlands"
+      }
+    },
+    "species": [
+      {
+        "hero": {
+          "_tag": "img",
+          "url": "media/common-crane.svg"
+        },
+        "vernacularName": {
+          "fi": "Kurki",
+          "sv": "Trana",
+          "en": "Common crane"
+        },
+        "scientificName": {
+          "fi": "Grus grus",
+          "sv": "Grus grus",
+          "en": "Grus grus"
+        },
+        "description": {
+          "fi": "Kurjen trumpettimainen ääni kantautuu kauas suon yli.",
+          "sv": "Tranans trumpetande läte hörs långt över våtmarken.",
+          "en": "The common crane’s trumpeting call carries across the wetlands."
+        }
+      }
+    ]
+  },
+  {
+    "info": {
+      "title": {
+        "fi": "Pohjoinen luonto",
+        "sv": "Naturen i norr",
+        "en": "Northern nature"
+      },
+      "description": {
+        "fi": "Koe tunturien maisemat ja pohjoisen pitkät talvet.",
+        "sv": "Upplev fjällandskapen och de långa vintrarna i norr.",
+        "en": "Experience fell landscapes and the long winters of the north."
+      },
+      "qrDescription": {
+        "fi": "Skannaa koodi ja tutustu pohjoisen eläimiin.",
+        "sv": "Skanna koden och lär känna djuren i norr.",
+        "en": "Scan the code to meet the animals of the north."
+      },
+      "qrUrl": {
+        "fi": "https://example.com/fi/northern-nature",
+        "sv": "https://example.com/sv/northern-nature",
+        "en": "https://example.com/en/northern-nature"
+      }
+    },
+    "species": [
+      {
+        "hero": {
+          "_tag": "img",
+          "url": "media/reindeer.svg"
+        },
+        "vernacularName": {
+          "fi": "Poro",
+          "sv": "Ren",
+          "en": "Reindeer"
+        },
+        "scientificName": {
+          "fi": "Rangifer tarandus",
+          "sv": "Rangifer tarandus",
+          "en": "Rangifer tarandus"
+        },
+        "description": {
+          "fi": "Poro etsii jäkälää lumen alta pohjoisen talvessa.",
+          "sv": "Renen söker efter lavar under snön under den nordliga vintern.",
+          "en": "The reindeer searches for lichen beneath the snow during northern winters."
+        }
+      }
+    ]
+  }
+]

@@ -12,9 +12,10 @@ template.innerHTML = `
 const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesIdx: number): HTMLElement => {
   const screenEl = document.createElement('li');
   screenEl.innerHTML = `
-    <h3>${species.vernacularName[currentLang]}</h3>
+    <h3></h3>
     <a href="#/screens/${screenIdx}/${speciesIdx}">Link to species</a>
   `;
+  screenEl.querySelector('h3')!.textContent = species.vernacularName[currentLang];
   return screenEl;
 };
 

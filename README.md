@@ -1,7 +1,7 @@
 # Exhibition screens
 - frontend: electron + vite
 - backend: express
-- shared: TypeScript models used by both apps
+- shared: Zod schemas and inferred TypeScript models used by both apps
 
 ## Setup
 - node 24
@@ -19,3 +19,10 @@ Run separately:
 npm run dev:frontend
 npm run dev:backend
 ```
+
+## Env
+
+- `PORT`
+- `CONTENT_DIR` (backend)
+- `EXHIBITION_BACKEND_URL` (frontends base url)
+- `FULLSCREEN`

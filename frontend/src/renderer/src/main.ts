@@ -1,9 +1,6 @@
 import './style.css'
-import './components/navbar/component'
-import './components/screens-index/component'
-import './components/species-index/component'
-import './components/species-card/component'
-import { Lang } from '@exhibition-screens/shared';
+import type { Lang } from '@exhibition-screens/shared';
+import { getStartupContent } from './data-source';
 
 export let currentLang: Lang = 'fi';
 
@@ -58,17 +55,41 @@ if (!root) {
   throw new Error('Application root was not found')
 }
 
-// TODO not sure if this is a natural place for top-level logic or not..
-document.querySelector('x-navbar')?.addEventListener('text-size-changed', event => {
-  const { newSize } = (event as any).detail;
-  document.documentElement.style.fontSize = `${newSize}px`;
-});
+async function start(): Promise<void> {
+  const status = document.querySelector<HTMLElement>('#startup-status');
+  try {
+    const content = await getStartupContent();
+    await Promise.all([
+      import('./components/navbar/component'),
+      import('./components/screens-index/component'),
+      import('./components/species-index/component'),
+      import('./components/species-card/component'),
+    ]);
 
-document.querySelector('x-navbar')?.addEventListener('lang-changed', event => {
-  const { newLang } = (event as any).detail;
-  currentLang = newLang;
-  navigate();
-});
+    const navbar = document.createElement('x-navbar');
+    navbar.addEventListener('text-size-changed', event => {
+      const { newSize } = (event as CustomEvent<{ newSize: number }>).detail;
+      document.documentElement.style.fontSize = `${newSize}px`;
+    });
+    navbar.addEventListener('lang-changed', event => {
+      const { newLang } = (event as CustomEvent<{ newLang: Lang }>).detail;
+      currentLang = newLang;
+      navigate();
+    });
+    root?.before(navbar);
 
-window.addEventListener('hashchange', navigate)
-navigate();
+    if (status) {
+      status.hidden = true;
+    }
+    window.addEventListener('hashchange', navigate);
+    navigate();
+  } catch (error) {
+    console.error('Unable to load content.', error);
+    if (status) {
+      status.hidden = false;
+      status.textContent = 'Unable to load content.';
+    }
+  }
+}
+
+void start();

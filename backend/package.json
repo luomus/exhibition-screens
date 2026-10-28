@@ -4,16 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc -p tsconfig.json",
+    "dev": "npm --prefix ../shared run build && npm run dev:app",
+    "dev:app": "tsx watch src/index.ts",
+    "build": "npm --prefix ../shared run build && tsc -p tsconfig.json",
     "start": "node dist/index.js",
-    "typecheck": "tsc --noEmit -p tsconfig.json"
+    "typecheck": "npm --prefix ../shared run build && tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
+    "@exhibition-screens/shared": "0.1.0",
     "express": "^5.3.0"
   },
   "devDependencies": {
-    "@exhibition-screens/shared": "0.1.0",
     "@types/express": "^5.0.6",
     "@types/node": "^24.19.2",
     "tsx": "^4.23.15",

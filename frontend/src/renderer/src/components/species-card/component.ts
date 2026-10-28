@@ -1,4 +1,4 @@
-import type { ScreenData, SpeciesCard } from '@exhibition-screens/shared';
+import type { ScreenData, SpeciesCard, Media } from '@exhibition-screens/shared';
 import styles from './styles.css?inline';
 import { getScreens } from '../../data-source';
 import { currentLang } from '../../main';
@@ -9,14 +9,37 @@ template.innerHTML = `
   <button id="return-btn">Palaa</button>
 `;
 
+const cardTemplate = document.createElement('template');
+cardTemplate.innerHTML = `
+  <div id="species-card">
+    <div class="hero"></div>
+    <h2></h2>
+    <p id="scientific-name"></p>
+    <p id="description"></p>
+  </div>
+`;
+
 const createSpeciesCard = (species: SpeciesCard): HTMLElement => {
-  const el = document.createElement('div');
-  el.setAttribute('id', 'species-card');
-  el.innerHTML = `
-    <h2>${species.vernacularName[currentLang]}</h2>
-    <p>${species.scientificName[currentLang]}</p>
-    <p>${species.description[currentLang]}</p>
-  `;
+  const fragment = cardTemplate.content.cloneNode(true) as DocumentFragment;
+  const el = fragment.firstElementChild as HTMLElement;
+  el.querySelector('h2')!.textContent = species.vernacularName[currentLang];
+  el.querySelector('#scientific-name')!.textContent = species.scientificName[currentLang];
+  el.querySelector('#description')!.textContent = species.description[currentLang];
+
+  const createMedia = (hero: Media): HTMLElement => {
+    let el: HTMLImageElement | HTMLVideoElement;
+    if (hero._tag === 'img') {
+      el = document.createElement('img');
+    } else {
+      el = document.createElement('video');
+      el.controls = true;
+      el.preload = 'metadata';
+    }
+    el.src = `exhibition-cache://${species.hero.url}`;
+    return el;
+  }
+
+  el.querySelector('.hero')!.append(createMedia(species.hero));
   return el;
 };
 

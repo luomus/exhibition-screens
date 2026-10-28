@@ -5,13 +5,16 @@
   "type": "module",
   "main": "./out/main/index.js",
   "scripts": {
-    "dev": "electron-vite dev --watch",
+    "dev": "npm --prefix ../shared run build && npm run dev:app",
+    "dev:app": "electron-vite dev --watch",
     "build": "npm run typecheck && electron-vite build",
     "start": "electron-vite preview --skipBuild",
-    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
+    "typecheck": "npm --prefix ../shared run build && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
+  },
+  "dependencies": {
+    "@exhibition-screens/shared": "0.1.0"
   },
   "devDependencies": {
-    "@exhibition-screens/shared": "0.1.0",
     "@types/node": "^24.19.2",
     "electron": "^44.7.0",
     "electron-vite": "^5.0.0",

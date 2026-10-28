@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#234554"/>
+  <ellipse cx="460" cy="255" rx="92" ry="54" fill="#b6c4cb"/>
+  <path d="M510 244L546 146L569 139" fill="none" stroke="#b6c4cb" stroke-width="25" stroke-linecap="round"/>
+  <path d="M575 140L627 147L576 154Z" fill="#d0b370"/>
+  <circle cx="566" cy="136" r="15" fill="#b34f4f"/>
+  <path d="M436 302L422 367M481 302L498 367" stroke="#d0b370" stroke-width="10"/>
+  <text x="480" y="425" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#fff">Common crane</text>
+  <text x="480" y="475" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#c7dce5">Exhibition demo image</text>
+</svg>

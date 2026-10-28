@@ -46,11 +46,11 @@ export class NavbarComponent extends HTMLElement {
     if (attribute === 'screen-idx' && newValue !== null) {
       const screenIdx = parseInt(newValue);
       if (screenIdx < 0) {
-        this.shadow.querySelector('#screen-title')!.innerHTML = 'Screen selection';
+        this.shadow.querySelector('#screen-title')!.textContent = 'Screen selection';
       } else {
         getScreens().then(screens => {
           if (!this.shadow.isConnected) return;
-          this.shadow.querySelector('#screen-title')!.innerHTML = screens[screenIdx].info.title[currentLang];
+          this.shadow.querySelector('#screen-title')!.textContent = screens[screenIdx].info.title[currentLang];
         });
       }
     }
