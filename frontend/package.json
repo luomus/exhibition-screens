@@ -1,5 +1,5 @@
 {
-  "name": "@exhibition-screens/frontend",
+  "name": "exhibition-screens-frontend",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -8,6 +8,8 @@
     "dev": "npm --prefix ../shared run build && npm run dev:app",
     "dev:app": "electron-vite dev --watch",
     "build": "npm run typecheck && electron-vite build",
+    "package:dev": "npm run build && electron-builder build",
+    "package:prod": "npm run build && electron-builder build -l --arm64",
     "start": "electron-vite preview --skipBuild",
     "typecheck": "npm --prefix ../shared run build && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
   },
@@ -16,7 +18,8 @@
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
-    "electron": "^44.7.0",
+    "electron": "44.7.0",
+    "electron-builder": "^26.18.0",
     "electron-vite": "^5.0.0",
     "typescript": "^7.0.2",
     "vite": "^7.3.7"
