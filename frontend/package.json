@@ -9,7 +9,7 @@
     "dev:app": "electron-vite dev --watch",
     "build": "npm run typecheck && electron-vite build",
     "package:dev": "npm run build && electron-builder build",
-    "package:prod": "npm run build && electron-builder build --linux AppImage --arm64",
+    "package:prod": "npm run build && electron-builder build --linux deb --arm64",
     "start": "electron-vite preview --skipBuild",
     "typecheck": "npm --prefix ../shared run build && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
   },
