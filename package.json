@@ -2,6 +2,10 @@
   "name": "exhibition-screens",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Pyry Mäkinen",
+    "email": "pyry.makinen@helsinki.fi"
+  },
   "workspaces": ["shared", "frontend", "backend"],
   "engines": {
     "node": ">=24 <25"

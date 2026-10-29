@@ -2,6 +2,10 @@
   "name": "@exhibition-screens/shared",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Pyry Mäkinen",
+    "email": "pyry.makinen@helsinki.fi"
+  },
   "type": "module",
   "main": "./dist/model.js",
   "types": "./dist/model.d.ts",

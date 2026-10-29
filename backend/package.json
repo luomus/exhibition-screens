@@ -2,6 +2,10 @@
   "name": "exhibition-screens-backend",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Pyry Mäkinen",
+    "email": "pyry.makinen@helsinki.fi"
+  },
   "type": "module",
   "scripts": {
     "dev": "npm --prefix ../shared run build && npm run dev:app",
