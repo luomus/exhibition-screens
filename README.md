@@ -25,4 +25,5 @@ npm run dev:backend
 - `PORT`
 - `CONTENT_DIR` (backend)
 - `EXHIBITION_BACKEND_URL` (frontends base url)
-- `FULLSCREEN`
+- `FULLSCREEN`: true/false
+- `SCREEN_IDX`: number

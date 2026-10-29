@@ -45,7 +45,8 @@ const renderPage = (el: HTMLElement) => {
 };
 
 const navigate = () => {
-  const path = location.hash.slice(1) || '/home';
+  const fallbackPath = window.config.screenIdx !== undefined ? `/screens/${window.config.screenIdx}` : '/home';
+  const path = location.hash.slice(1) || fallbackPath;
   renderPage(getRoute(path));
 }
 
@@ -58,7 +59,6 @@ if (!root) {
 async function start(): Promise<void> {
   const status = document.querySelector<HTMLElement>('#startup-status');
   try {
-    const content = await getStartupContent();
     await Promise.all([
       import('./components/navbar/component'),
       import('./components/screens-index/component'),
