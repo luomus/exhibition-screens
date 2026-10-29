@@ -6,6 +6,7 @@
     "name": "Pyry Mäkinen",
     "email": "pyry.makinen@helsinki.fi"
   },
+  "homepage": "https://github.com/luomus/exhibition-screens",
   "workspaces": ["shared", "frontend", "backend"],
   "engines": {
     "node": ">=24 <25"

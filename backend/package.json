@@ -6,6 +6,7 @@
     "name": "Pyry Mäkinen",
     "email": "pyry.makinen@helsinki.fi"
   },
+  "homepage": "https://github.com/luomus/exhibition-screens",
   "type": "module",
   "scripts": {
     "dev": "npm --prefix ../shared run build && npm run dev:app",
