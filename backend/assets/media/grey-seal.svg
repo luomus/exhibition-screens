@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#183e53" />
+  <ellipse cx="480" cy="335" rx="230" ry="35" fill="#6d818b" />
+  <ellipse cx="480" cy="270" rx="170" ry="65" fill="#a6b1b8" />
+  <ellipse cx="615" cy="220" rx="65" ry="75" fill="#a6b1b8" />
+  <path d="m330 270-80-45 15 75z" fill="#a6b1b8" />
+  <path d="m460 295 55 45 35-40" fill="#7d8e99" />
+  <circle cx="635" cy="205" r="8" fill="#172832" />
+  <ellipse cx="660" cy="235" rx="15" ry="10" fill="#172832" />
+  <path d="m653 245-35 5m35 2-30 12" stroke="#e1e8ec" stroke-width="4" stroke-linecap="round" />
+  <text x="480" y="415" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#fff">Grey seal</text>
+  <text x="480" y="465" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#c4d9e4">Exhibition demo image</text>
+</svg>

@@ -26,6 +26,7 @@ export const VideoSchema = z.object({
 });
 
 export const SpeciesCardSchema = z.object({
+  thumbnail: ImgSchema,
   hero: z.discriminatedUnion('_tag', [ImgSchema, VideoSchema]),
   vernacularName: MultiLangStringSchema,
   scientificName: MultiLangStringSchema,

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#17382a" />
+  <path d="m380 195-20-100 95 65m50 0 95-65-20 100" fill="#c86b32" />
+  <path d="m380 160-8-40 42 37m132 0 42-37-8 40" fill="#493126" />
+  <path d="m365 180 115-45 115 45-30 95-85 65-85-65z" fill="#c86b32" />
+  <path d="m395 245 85 35 85-35-85 95z" fill="#f3e3ca" />
+  <circle cx="435" cy="220" r="9" fill="#17201c" />
+  <circle cx="525" cy="220" r="9" fill="#17201c" />
+  <path d="m462 280 18 22 18-22z" fill="#17201c" />
+  <text x="480" y="415" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#fff">Red fox</text>
+  <text x="480" y="465" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#c4ddd1">Exhibition demo image</text>
+</svg>

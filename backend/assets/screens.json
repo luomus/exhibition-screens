@@ -28,6 +28,10 @@
           "_tag": "img",
           "url": "media/brown-bear.svg"
         },
+        "thumbnail": {
+          "_tag": "img",
+          "url": "media/brown-bear.svg"
+        },
         "vernacularName": {
           "fi": "Karhu",
           "sv": "Brunbjörn",
@@ -42,6 +46,56 @@
           "fi": "Karhu etsii metsästä marjoja ja muuta ravintoa.",
           "sv": "Brunbjörnen söker efter bär och annan föda i skogen.",
           "en": "The brown bear searches the forest for berries and other food."
+        }
+      },
+      {
+        "hero": {
+          "_tag": "img",
+          "url": "media/red-fox.svg"
+        },
+        "thumbnail": {
+          "_tag": "img",
+          "url": "media/red-fox.svg"
+        },
+        "vernacularName": {
+          "fi": "Kettu",
+          "sv": "Rödräv",
+          "en": "Red fox"
+        },
+        "scientificName": {
+          "fi": "Vulpes vulpes",
+          "sv": "Vulpes vulpes",
+          "en": "Vulpes vulpes"
+        },
+        "description": {
+          "fi": "Kettu kuuntelee tarkasti ja etsii pieniä jyrsijöitä metsänreunassa.",
+          "sv": "Rödräven lyssnar noga och letar efter små gnagare i skogsbrynet.",
+          "en": "The red fox listens carefully as it searches for small rodents at the forest edge."
+        }
+      },
+      {
+        "hero": {
+          "_tag": "img",
+          "url": "media/red-squirrel.svg"
+        },
+        "thumbnail": {
+          "_tag": "img",
+          "url": "media/red-squirrel.svg"
+        },
+        "vernacularName": {
+          "fi": "Orava",
+          "sv": "Ekorre",
+          "en": "Red squirrel"
+        },
+        "scientificName": {
+          "fi": "Sciurus vulgaris",
+          "sv": "Sciurus vulgaris",
+          "en": "Sciurus vulgaris"
+        },
+        "description": {
+          "fi": "Orava kiipeilee puissa ja syö käpyjen siemeniä.",
+          "sv": "Ekorren klättrar i träden och äter frön från kottar.",
+          "en": "The red squirrel climbs trees and eats seeds from cones."
         }
       }
     ]
@@ -74,6 +128,10 @@
         "hero": {
           "_tag": "video",
           "url": "media/grey-seal.webm"
+        },
+        "thumbnail": {
+          "_tag": "img",
+          "url": "media/grey-seal.svg"
         },
         "vernacularName": {
           "fi": "Harmaahylje",
@@ -122,6 +180,10 @@
           "_tag": "img",
           "url": "media/common-crane.svg"
         },
+        "thumbnail": {
+          "_tag": "img",
+          "url": "media/common-crane.svg"
+        },
         "vernacularName": {
           "fi": "Kurki",
           "sv": "Trana",
@@ -166,6 +228,10 @@
     "species": [
       {
         "hero": {
+          "_tag": "img",
+          "url": "media/reindeer.svg"
+        },
+        "thumbnail": {
           "_tag": "img",
           "url": "media/reindeer.svg"
         },

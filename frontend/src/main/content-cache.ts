@@ -108,14 +108,15 @@ export class ContentCache {
     // fetch json from backend
     const screenData = await this.loadBackendJson();
     // uncover all media
-    const mediaPromises = [];
+    const mediaPaths = new Set<string>();
     for (const screen of screenData) {
       for (const species of screen.species) {
-        mediaPromises.push(this.loadBackendMedia(species.hero.url));
+        mediaPaths.add(species.hero.url);
+        mediaPaths.add(species.thumbnail.url);
       }
     }
     // load media in parallel
-    await Promise.all(mediaPromises);
+    await Promise.all([...mediaPaths].map(path => this.loadBackendMedia(path)));
     this.refreshSucceeded = true;
     return null;
   }

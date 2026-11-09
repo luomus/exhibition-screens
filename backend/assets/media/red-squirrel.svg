@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#17382a" />
+  <path d="M470 310c-170 65-220-85-155-160 55-65 145 0 95 55-45 50-25 80 60 65" fill="#a8532d" />
+  <ellipse cx="500" cy="275" rx="65" ry="80" fill="#bb6a3c" />
+  <ellipse cx="517" cy="290" rx="33" ry="50" fill="#e7c59c" />
+  <path d="m485 170 2-67 42 48m10 0 38-45-7 75" fill="#bb6a3c" />
+  <ellipse cx="530" cy="190" rx="60" ry="48" fill="#bb6a3c" />
+  <circle cx="550" cy="180" r="8" fill="#17201c" />
+  <ellipse cx="586" cy="199" rx="10" ry="8" fill="#17201c" />
+  <ellipse cx="550" cy="264" rx="19" ry="27" fill="#765135" />
+  <path d="m516 252 30 11m-26 17 26-5" stroke="#bb6a3c" stroke-width="14" stroke-linecap="round" />
+  <text x="480" y="415" text-anchor="middle" font-family="sans-serif" font-size="40" fill="#fff">Red squirrel</text>
+  <text x="480" y="465" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#c4ddd1">Exhibition demo image</text>
+</svg>

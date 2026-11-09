@@ -12,9 +12,12 @@ template.innerHTML = `
 const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesIdx: number): HTMLElement => {
   const screenEl = document.createElement('li');
   screenEl.innerHTML = `
-    <h3></h3>
-    <a href="#/screens/${screenIdx}/${speciesIdx}">Link to species</a>
+    <a href="#/screens/${screenIdx}/${speciesIdx}">
+      <img class="thumbnail" alt="" width="240" height="135" />
+      <h3></h3>
+    </a>
   `;
+  screenEl.querySelector('img')!.src = `exhibition-cache://${species.thumbnail.url}`;
   screenEl.querySelector('h3')!.textContent = species.vernacularName[currentLang];
   return screenEl;
 };
@@ -62,7 +65,7 @@ export class SpeciesIndexComponent extends HTMLElement {
 
   update() {
     if (this.screens === undefined || this.screenIdx === undefined) return;
-    this.shadow.querySelector('#screen-list')?.remove();
+    this.shadow.querySelector('#species-list')?.remove();
     this.shadow.append(createSpeciesList(this.screens[this.screenIdx], this.screenIdx));
   }
 }
