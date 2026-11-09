@@ -1,13 +1,19 @@
 @import './vars.css';
-
-button {
-  touch-action: manipulation;
-}
+@import './base.css';
 
 :root {
   color: var(--neutral-8);
-  background: var(--neutral-2);
+  background: var(--neutral-1);
   font-family: Corbel, "Segoe UI", Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  /* navbar h1 height + padding */
+  padding-top: calc(2rem + 24px);
 }

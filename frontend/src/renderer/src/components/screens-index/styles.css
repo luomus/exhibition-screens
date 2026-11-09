@@ -1,0 +1,18 @@
+:host {
+  padding: 24px;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+a {
+  font-size: 24px;
+}

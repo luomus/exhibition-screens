@@ -1,11 +1,12 @@
 import { ScreenData, SpeciesCard } from '@exhibition-screens/shared';
 import styles from './styles.css?inline';
+import baseStyles from '../../base.css?inline';
 import { getScreens } from '../../data-source';
 import { currentLang } from '../../main';
 
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>${styles}</style>
+  <style>${baseStyles}${styles}</style>
   <h2>Species index</h2>
 `;
 

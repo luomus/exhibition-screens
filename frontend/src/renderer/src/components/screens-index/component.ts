@@ -1,19 +1,19 @@
 import { getScreens } from '../../data-source';
 import { currentLang } from '../../main';
 import styles from './styles.css?inline';
+import baseStyles from '../../base.css?inline';
 import type { ScreenData } from '@exhibition-screens/shared';
 
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>${styles}</style>
+  <style>${baseStyles}${styles}</style>
   <h2>Screens index</h2>
 `;
 
 const createScreenListItem = (screen: ScreenData, index: number): HTMLElement => {
   const screenEl = document.createElement('li');
   screenEl.innerHTML = `
-    <h3>${screen.info.title[currentLang]}</h3>
-    <a href="#/screens/${index}">Link to screen</a>
+    <a href="#/screens/${index}">${screen.info.title[currentLang]}</a>
   `;
   return screenEl;
 };

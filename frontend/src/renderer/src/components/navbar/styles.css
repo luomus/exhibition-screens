@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url('../../assets/pattern.svg');
+  background-repeat: repeat;
+  backdrop-filter: blur(12px);
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.right-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0px 4px;
+  color: var(--primary-6);
+}
+
+svg {
+  width: 2em;
+  height: 2em;
+}

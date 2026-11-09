@@ -1,0 +1,21 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-6);
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a, button {
+  touch-action: manipulation;
+}
+
+h1 {
+  font-size: 2rem;
+}

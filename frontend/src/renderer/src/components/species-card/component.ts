@@ -1,13 +1,14 @@
 import type { ScreenData, SpeciesCard, Media } from '@exhibition-screens/shared';
 import styles from './styles.css?inline';
+import baseStyles from '../../base.css?inline';
 import { getScreens } from '../../data-source';
 import { currentLang } from '../../main';
 import homeSvg from '../../assets/icons/home.svg?raw';
 
 const template = document.createElement('template');
 template.innerHTML = `
-  <style>${styles}</style>
-  <button id="return-btn">${ homeSvg }</button>
+  <style>${baseStyles}${styles}</style>
+  <!-- <button id="return-btn">${ homeSvg }</button> -->
 `;
 
 const cardTemplate = document.createElement('template');
@@ -33,7 +34,11 @@ const createSpeciesCard = (species: SpeciesCard): HTMLElement => {
       el = document.createElement('img');
     } else {
       el = document.createElement('video');
-      el.controls = true;
+      el.controls = false;
+      el.autoplay = true;
+      el.loop = true;
+      el.muted = true;
+      el.playsInline = true;
       el.preload = 'metadata';
     }
     el.src = `exhibition-cache://${species.hero.url}`;
