@@ -7,6 +7,7 @@ button {
 :root {
   color: var(--neutral-8);
   background: var(--neutral-2);
+  font-family: Corbel, "Segoe UI", Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }

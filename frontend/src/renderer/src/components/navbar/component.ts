@@ -2,6 +2,11 @@ import { Lang } from '@exhibition-screens/shared';
 import styles from './styles.css?inline';
 import { getScreens } from '../../data-source';
 import { currentLang } from '../../main';
+import textSizeSvg from '../../assets/icons/text-size.svg?raw';
+import fiSvg from '../../assets/icons/fi.svg?raw';
+import svSvg from '../../assets/icons/sv.svg?raw';
+import enSvg from '../../assets/icons/en-gb.svg?raw';
+import homeSvg from '../../assets/icons/home.svg?raw';
 
 const TEXT_SIZE_LEVEL_COUNT = 4;
 
@@ -10,10 +15,11 @@ const createTemplate = (title: string) => {
   template.innerHTML = `
     <style>${styles}</style>
     <h1 id="screen-title">${title}</h1>
-    <button id="text-size-btn">Text size</button>
-    <button id="fi-btn">Fi</button>
-    <button id="sv-btn">Sv</button>
-    <button id="en-btn">En</button>
+    <button id="text-size-btn">${ textSizeSvg }</button>
+    <button id="fi-btn">${ fiSvg }</button>
+    <button id="sv-btn">${ svSvg }</button>
+    <button id="en-btn">${ enSvg }</button>
+    <a id="return-btn" href="#/home">${ homeSvg }</a>
   `;
   return template;
 };
