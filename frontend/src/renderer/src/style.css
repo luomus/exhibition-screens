@@ -3,10 +3,14 @@
 
 :root {
   color: var(--neutral-8);
-  background: var(--neutral-1);
   font-family: Corbel, "Segoe UI", Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
+  /* background: var(--neutral-1); */
+  background-color: var(--neutral-1);
+  background-image: url('./assets/topography.svg');
+  background-repeat: repeat;
 }
 
 body {

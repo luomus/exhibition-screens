@@ -7,14 +7,23 @@ import { currentLang } from '../../main';
 const template = document.createElement('template');
 template.innerHTML = `
   <style>${baseStyles}${styles}</style>
-  <h2>Species index</h2>
+  <svg width="0" height="0" aria-hidden="true"
+       style="position: absolute">
+    <defs>
+      <clipPath id="wavy-bottom" clipPathUnits="objectBoundingBox">
+        <path d="M0 0 H1 V0.95 Q0.75 1 0.5 0.95 T0 0.95 Z" />
+      </clipPath>
+    </defs>
+  </svg>
 `;
 
 const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesIdx: number): HTMLElement => {
   const screenEl = document.createElement('li');
   screenEl.innerHTML = `
-    <a href="#/screens/${screenIdx}/${speciesIdx}">
-      <img class="thumbnail" alt="" width="240" height="135" />
+    <a class="panel" href="#/screens/${screenIdx}/${speciesIdx}">
+      <div class="img-frame">
+        <img alt=""/>
+      </div>
       <h3></h3>
     </a>
   `;
@@ -24,7 +33,8 @@ const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesId
 };
 
 const createSpeciesList = (screen: ScreenData, screenIdx: number): HTMLElement => {
-  const items = screen.species.map((species, speciesIdx) => createSpeciesListItem(species, screenIdx, speciesIdx));
+  const temp_species = [...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species];
+  const items = temp_species.map((species, speciesIdx) => createSpeciesListItem(species, screenIdx, speciesIdx % 3)); // TODO remove temp modulo
   const ulEl = document.createElement('ul');
   ulEl.setAttribute('id', 'species-list');
   ulEl.append(...items);

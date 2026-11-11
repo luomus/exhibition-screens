@@ -26,11 +26,11 @@
       {
         "hero": {
           "_tag": "img",
-          "url": "media/brown-bear.svg"
+          "url": "media/brown-bear.jpg"
         },
         "thumbnail": {
           "_tag": "img",
-          "url": "media/brown-bear.svg"
+          "url": "media/brown-bear.jpg"
         },
         "vernacularName": {
           "fi": "Karhu",
@@ -51,11 +51,11 @@
       {
         "hero": {
           "_tag": "img",
-          "url": "media/red-fox.svg"
+          "url": "media/red-fox.jpg"
         },
         "thumbnail": {
           "_tag": "img",
-          "url": "media/red-fox.svg"
+          "url": "media/red-fox.jpg"
         },
         "vernacularName": {
           "fi": "Kettu",
@@ -76,11 +76,11 @@
       {
         "hero": {
           "_tag": "img",
-          "url": "media/red-squirrel.svg"
+          "url": "media/red-squirrel.jpg"
         },
         "thumbnail": {
           "_tag": "img",
-          "url": "media/red-squirrel.svg"
+          "url": "media/red-squirrel.jpg"
         },
         "vernacularName": {
           "fi": "Orava",
@@ -178,11 +178,11 @@
       {
         "hero": {
           "_tag": "img",
-          "url": "media/common-crane.svg"
+          "url": "media/common-crane.jpg"
         },
         "thumbnail": {
           "_tag": "img",
-          "url": "media/common-crane.svg"
+          "url": "media/common-crane.jpg"
         },
         "vernacularName": {
           "fi": "Kurki",

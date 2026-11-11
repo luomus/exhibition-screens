@@ -6,4 +6,42 @@
 ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+img {
+  max-width: 300px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  clip-path: url(#wavy-bottom);
+}
+
+h3 {
+  margin: 0;
+  padding: 0px 16px 12px 16px;
+  /*border-top: 2px solid var(--primary-6);*/
+}
+
+.panel {
+  display: block;
+  /* background: var(--neutral-2); */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 2px 1px 12px 0px rgba(0, 0, 0, .6);
+  background: linear-gradient(to bottom, var(--neutral-4), var(--neutral-3));
+  /*box-shadow: 1px 1px 8px 0px rgb(from var(--primary-2) r g b / 20%);*/
+}
+
+a.panel h3 {
+  color: var(--primary-9);
+}
+
+.img-frame {
+  /* filter: drop-shadow(0 2px 12px rgb(from var(--primary-6) r g b / 20%)); */
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .8));
 }

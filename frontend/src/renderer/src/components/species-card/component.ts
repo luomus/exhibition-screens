@@ -32,6 +32,7 @@ const createSpeciesCard = (species: SpeciesCard): HTMLElement => {
     let el: HTMLImageElement | HTMLVideoElement;
     if (hero._tag === 'img') {
       el = document.createElement('img');
+      el.alt = species.vernacularName[currentLang];
     } else {
       el = document.createElement('video');
       el.controls = false;
