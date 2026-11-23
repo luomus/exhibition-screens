@@ -54,9 +54,11 @@ export class NavbarComponent extends HTMLElement {
     newValue: string | null
   ) {
     if (oldValue === newValue) return;
-    if (attribute === 'screen-idx' && newValue !== null) {
-      const screenIdx = parseInt(newValue);
-      if (screenIdx < 0) {
+    if (attribute === 'screen-idx') {
+      const screenIdx = parseInt(newValue ?? '-1', 10);
+      const hasScreen = screenIdx >= 0;
+      this.shadow.querySelector<HTMLAnchorElement>('#return-btn')!.href = hasScreen ? `#/screens/${screenIdx}` : '#/home';
+      if (!hasScreen) {
         this.shadow.querySelector('#screen-title')!.textContent = 'Screen selection';
       } else {
         getScreens().then(screens => {

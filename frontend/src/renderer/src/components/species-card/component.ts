@@ -15,8 +15,10 @@ const cardTemplate = document.createElement('template');
 cardTemplate.innerHTML = `
   <div id="species-card">
     <div class="hero"></div>
-    <h2></h2>
-    <p id="scientific-name"></p>
+    <div class="title">
+      <h2></h2>
+      <i id="scientific-name"></i>
+    </div>
     <p id="description"></p>
   </div>
 `;
@@ -25,7 +27,7 @@ const createSpeciesCard = (species: SpeciesCard): HTMLElement => {
   const fragment = cardTemplate.content.cloneNode(true) as DocumentFragment;
   const el = fragment.firstElementChild as HTMLElement;
   el.querySelector('h2')!.textContent = species.vernacularName[currentLang];
-  el.querySelector('#scientific-name')!.textContent = species.scientificName[currentLang];
+  el.querySelector('#scientific-name')!.textContent = species.scientificName;
   el.querySelector('#description')!.textContent = species.description[currentLang];
 
   const createMedia = (hero: Media): HTMLElement => {

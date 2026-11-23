@@ -1,23 +1,23 @@
 :root {
   --neutral-1: hsl(20deg, 20%, 14%);
-  --neutral-2: hsl(20deg, 14%, 22%);
-  --neutral-3: hsl(20deg, 12%, 30%);
-  --neutral-4: hsl(20deg, 10%, 40%);
+  --neutral-2: hsl(20deg, 16%, 22%);
+  --neutral-3: hsl(20deg, 14%, 30%);
+  --neutral-4: hsl(20deg, 12%, 40%);
   --neutral-5: hsl(20deg, 10%, 50%);
-  --neutral-6: hsl(20deg, 10%, 60%);
-  --neutral-7: hsl(20deg, 10%, 75%);
-  --neutral-8: hsl(20deg, 15%, 88%);
+  --neutral-6: hsl(20deg, 12%, 60%);
+  --neutral-7: hsl(20deg, 14%, 75%);
+  --neutral-8: hsl(20deg, 16%, 88%);
   --neutral-9: hsl(20deg, 20%, 96%);
 
-  --primary-1: hsl(55deg, 40%, 8%);
-  --primary-2: hsl(55deg, 42%, 12%);
-  --primary-3: hsl(55deg, 44%, 18%);
-  --primary-4: hsl(55deg, 46%, 28%);
-  --primary-5: hsl(55deg, 50%, 50%);
-  --primary-6: hsl(55deg, 60%, 65%);
-  --primary-7: hsl(55deg, 70%, 78%);
-  --primary-8: hsl(55deg, 80%, 88%);
-  --primary-9: hsl(55deg, 90%, 96%);
+  --primary-1: hsl(200deg, 20%, 8%);
+  --primary-2: hsl(200deg, 22%, 12%);
+  --primary-3: hsl(200deg, 24%, 18%);
+  --primary-4: hsl(200deg, 26%, 28%);
+  --primary-5: hsl(200deg, 30%, 50%);
+  --primary-6: hsl(200deg, 40%, 65%);
+  --primary-7: hsl(200deg, 50%, 78%);
+  --primary-8: hsl(200deg, 60%, 88%);
+  --primary-9: hsl(200deg, 70%, 96%);
 
   --danger-1: hsl(0deg, 80%, 8%);
   --danger-2: hsl(0deg, 80%, 12%);

@@ -26,22 +26,45 @@ img {
   /* background: var(--neutral-2); */
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 2px 1px 12px 0px rgba(0, 0, 0, .8);
+  box-shadow:
+    2px 1px 8px 4px black,
+    inset -2px -4px 8px -4px rgba(0, 0, 0, .6);
   /* box-shadow: 2px 1px 12px 0px rgb(from var(--primary-3) r g b / 80%); */
-  background: linear-gradient(to bottom, var(--neutral-3), var(--neutral-2));
+  /* background: linear-gradient(to bottom, var(--neutral-3), var(--neutral-2)); */
+  /* background: var(--neutral-2); */
+  background-color: var(--neutral-2);
+  background-image: url('../../assets/topography2.svg');
+  background-repeat: repeat;
 
-  border: 1px solid var(--primary-5);
+  border: 2px solid var(--primary-5);
   /*box-shadow: 1px 1px 8px 0px rgb(from var(--primary-2) r g b / 20%);*/
 }
 
-a.panel h3 {
+.title {
+  padding: 0px 16px 12px 16px;
+  text-shadow: 0px 1px 2px var(--neutral-1);
+}
+
+.title h3 {
+  display: inline-block;
   color: var(--primary-9);
   margin: 0;
-  padding: 0px 16px 12px 16px;
+  margin-right: 4px;
   /*border-top: 2px solid var(--primary-6);*/
 }
 
+.title i {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
 .img-frame {
-  /* filter: drop-shadow(0 2px 12px rgb(from var(--primary-6) r g b / 20%)); */
-  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .8));
+  /* filter: drop-shadow(0 8px 4px rgb(from var(--neutral-3) r g b / 80%)); */
+  filter: drop-shadow(0 8px 4px var(--neutral-3));
+  /* filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .8)); */
+}
+
+#screen-desc {
+  max-width: 50rem;
+  white-space: pre-line;
 }

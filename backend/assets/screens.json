@@ -7,7 +7,7 @@
         "en": "Finnish forests"
       },
       "description": {
-        "fi": "Tutustu metsien kasveihin, eläimiin ja vuodenaikojen vaihteluun.",
+        "fi": "Tutustu metsien kasveihin, eläimiin ja vuodenaikojen vaihteluun.\n\nTutustu metsien kasveihin, eläimiin ja vuodenaikojen vaihteluun.",
         "sv": "Upptäck skogens växter, djur och skiftande årstider.",
         "en": "Explore forest plants, animals, and the changing seasons."
       },
@@ -37,13 +37,9 @@
           "sv": "Brunbjörn",
           "en": "Brown bear"
         },
-        "scientificName": {
-          "fi": "Ursus arctos",
-          "sv": "Ursus arctos",
-          "en": "Ursus arctos"
-        },
+        "scientificName": "Ursus arctos",
         "description": {
-          "fi": "Karhu etsii metsästä marjoja ja muuta ravintoa.",
+          "fi": "Karhu etsii metsästä marjoja ja muuta ravintoa.\n\nKarhu etsii metsästä marjoja ja muuta ravintoa.",
           "sv": "Brunbjörnen söker efter bär och annan föda i skogen.",
           "en": "The brown bear searches the forest for berries and other food."
         }
@@ -62,11 +58,7 @@
           "sv": "Rödräv",
           "en": "Red fox"
         },
-        "scientificName": {
-          "fi": "Vulpes vulpes",
-          "sv": "Vulpes vulpes",
-          "en": "Vulpes vulpes"
-        },
+        "scientificName": "Vulpes vulpes",
         "description": {
           "fi": "Kettu kuuntelee tarkasti ja etsii pieniä jyrsijöitä metsänreunassa.",
           "sv": "Rödräven lyssnar noga och letar efter små gnagare i skogsbrynet.",
@@ -87,11 +79,7 @@
           "sv": "Ekorre",
           "en": "Red squirrel"
         },
-        "scientificName": {
-          "fi": "Sciurus vulgaris",
-          "sv": "Sciurus vulgaris",
-          "en": "Sciurus vulgaris"
-        },
+        "scientificName": "Sciurus vulgaris",
         "description": {
           "fi": "Orava kiipeilee puissa ja syö käpyjen siemeniä.",
           "sv": "Ekorren klättrar i träden och äter frön från kottar.",
@@ -138,11 +126,7 @@
           "sv": "Gråsäl",
           "en": "Grey seal"
         },
-        "scientificName": {
-          "fi": "Halichoerus grypus",
-          "sv": "Halichoerus grypus",
-          "en": "Halichoerus grypus"
-        },
+        "scientificName": "Halichoerus grypus",
         "description": {
           "fi": "Harmaahylje ui Itämeressä ja lepää saariston luodoilla.",
           "sv": "Gråsälen simmar i Östersjön och vilar på skärgårdens kobbar.",
@@ -189,11 +173,7 @@
           "sv": "Trana",
           "en": "Common crane"
         },
-        "scientificName": {
-          "fi": "Grus grus",
-          "sv": "Grus grus",
-          "en": "Grus grus"
-        },
+        "scientificName": "Grus grus",
         "description": {
           "fi": "Kurjen trumpettimainen ääni kantautuu kauas suon yli.",
           "sv": "Tranans trumpetande läte hörs långt över våtmarken.",
@@ -240,11 +220,7 @@
           "sv": "Ren",
           "en": "Reindeer"
         },
-        "scientificName": {
-          "fi": "Rangifer tarandus",
-          "sv": "Rangifer tarandus",
-          "en": "Rangifer tarandus"
-        },
+        "scientificName": "Rangifer tarandus",
         "description": {
           "fi": "Poro etsii jäkälää lumen alta pohjoisen talvessa.",
           "sv": "Renen söker efter lavar under snön under den nordliga vintern.",

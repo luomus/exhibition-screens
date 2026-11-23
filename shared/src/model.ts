@@ -29,7 +29,7 @@ export const SpeciesCardSchema = z.object({
   thumbnail: ImgSchema,
   hero: z.discriminatedUnion('_tag', [ImgSchema, VideoSchema]),
   vernacularName: MultiLangStringSchema,
-  scientificName: MultiLangStringSchema,
+  scientificName: z.string(),
   description: MultiLangStringSchema,
 });
 

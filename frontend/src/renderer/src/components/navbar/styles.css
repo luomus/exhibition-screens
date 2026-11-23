@@ -1,14 +1,23 @@
 :host {
   display: block;
   box-shadow: 1px 0px 4px rgba(0, 0, 0, .2);
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 1;
 
-  background-color: rgba(0, 0, 0, .6);
-  background-image: url('../../assets/pattern.svg');
+  /* background-color: rgba(0, 0, 0, .6); */
+  /* background-color: rgb(from var(--neutral-3) r g b / 80%); */
+  background-color: var(--neutral-2);
+  box-shadow:
+    inset 0px 12px 8px -8px var(--neutral-3),
+    inset 0px -8px 8px -8px var(--neutral-1),
+    0px 1px 4px 0px rgba(0, 0, 0, .4)
+    ;
+  background-image: url('../../assets/topography2.svg');
   background-repeat: repeat;
-  backdrop-filter: blur(12px);
+  /* backdrop-filter: blur(12px); */
+  color: var(--neutral-8);
 }
 
 h1 {
@@ -47,6 +56,11 @@ button:disabled {
   justify-content: flex-end;
   margin: 0px 4px;
   color: var(--primary-6);
+
+  filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, .4));
+}
+
+#fi-btn, #en-btn, #sv-btn {
 }
 
 svg {

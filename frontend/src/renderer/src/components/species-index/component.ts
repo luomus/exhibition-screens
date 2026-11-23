@@ -15,6 +15,7 @@ template.innerHTML = `
       </clipPath>
     </defs>
   </svg>
+  <p id="screen-desc"></p>
 `;
 
 const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesIdx: number): HTMLElement => {
@@ -24,11 +25,15 @@ const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesId
       <div class="img-frame">
         <img alt=""/>
       </div>
-      <h3></h3>
+      <div class="title">
+        <h3></h3>
+        <i><span></span></i>
+      </div>
     </a>
   `;
   screenEl.querySelector('img')!.src = `exhibition-cache://${species.thumbnail.url}`;
   screenEl.querySelector('h3')!.textContent = species.vernacularName[currentLang];
+  screenEl.querySelector('span')!.textContent = species.scientificName;
   return screenEl;
 };
 
@@ -77,6 +82,7 @@ export class SpeciesIndexComponent extends HTMLElement {
   update() {
     if (this.screens === undefined || this.screenIdx === undefined) return;
     this.shadow.querySelector('#species-list')?.remove();
+    this.shadow.querySelector('#screen-desc')!.textContent = this.screens[this.screenIdx].info.description[currentLang];
     this.shadow.append(createSpeciesList(this.screens[this.screenIdx], this.screenIdx));
   }
 }
