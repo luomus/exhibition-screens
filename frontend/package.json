@@ -19,10 +19,12 @@
     "typecheck": "npm --prefix ../shared run build && tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json"
   },
   "dependencies": {
-    "@exhibition-screens/shared": "0.1.0"
+    "@exhibition-screens/shared": "0.1.0",
+    "qrcode": "^1.5.4"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
+    "@types/qrcode": "^1.5.6",
     "electron": "44.7.0",
     "electron-builder": "^26.18.0",
     "electron-vite": "^5.0.0",

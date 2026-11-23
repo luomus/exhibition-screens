@@ -1,4 +1,5 @@
 import { ScreenData, SpeciesCard } from '@exhibition-screens/shared';
+import { toCanvas } from 'qrcode';
 import styles from './styles.css?inline';
 import baseStyles from '../../base.css?inline';
 import { getScreens } from '../../data-source';
@@ -15,8 +16,28 @@ template.innerHTML = `
       </clipPath>
     </defs>
   </svg>
-  <p id="screen-desc"></p>
+  <div id="screen-intro">
+    <p id="screen-desc"></p>
+  </div>
 `;
+
+const createScreenQr = (url: string, description: string): HTMLCanvasElement => {
+  const canvas = document.createElement('canvas');
+  canvas.id = 'screen-qr';
+  canvas.hidden = true;
+  canvas.setAttribute('role', 'img');
+  canvas.setAttribute('aria-label', description);
+  toCanvas(canvas, url, { width: 384 }, error => {
+    if (error) {
+      console.warn('Unable to generate screen QR code:', error);
+      return;
+    }
+    // Let CSS size the canvas independently of its drawing resolution.
+    canvas.removeAttribute('style');
+    canvas.hidden = false;
+  });
+  return canvas;
+};
 
 const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesIdx: number): HTMLElement => {
   const screenEl = document.createElement('li');
@@ -38,8 +59,8 @@ const createSpeciesListItem = (species: SpeciesCard, screenIdx:number, speciesId
 };
 
 const createSpeciesList = (screen: ScreenData, screenIdx: number): HTMLElement => {
-  const temp_species = [...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species];
-  const items = temp_species.map((species, speciesIdx) => createSpeciesListItem(species, screenIdx, speciesIdx % 3)); // TODO remove temp modulo
+  const tempSpecies = [...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species, ...screen.species];
+  const items = tempSpecies.map((species, speciesIdx) => createSpeciesListItem(species, screenIdx, speciesIdx % 3)); // TODO remove temp modulo
   const ulEl = document.createElement('ul');
   ulEl.setAttribute('id', 'species-list');
   ulEl.append(...items);
@@ -81,9 +102,16 @@ export class SpeciesIndexComponent extends HTMLElement {
 
   update() {
     if (this.screens === undefined || this.screenIdx === undefined) return;
+    const screen = this.screens[this.screenIdx];
+    const intro = this.shadow.querySelector('#screen-intro')!;
+    intro.querySelector('#screen-desc')!.textContent = screen.info.description[currentLang];
+    intro.querySelector('#screen-qr')?.remove();
+    const qrUrl = screen.info.qrUrl[currentLang].trim();
+    if (qrUrl) {
+      intro.append(createScreenQr(qrUrl, screen.info.qrDescription[currentLang] || qrUrl));
+    }
     this.shadow.querySelector('#species-list')?.remove();
-    this.shadow.querySelector('#screen-desc')!.textContent = this.screens[this.screenIdx].info.description[currentLang];
-    this.shadow.append(createSpeciesList(this.screens[this.screenIdx], this.screenIdx));
+    this.shadow.append(createSpeciesList(screen, this.screenIdx));
   }
 }
 

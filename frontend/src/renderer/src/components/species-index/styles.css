@@ -64,7 +64,21 @@ img {
   /* filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .8)); */
 }
 
+#screen-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#screen-qr {
+  width: min(10rem, 40%);
+  height: auto;
+  image-rendering: pixelated;
+}
+
 #screen-desc {
-  max-width: 50rem;
+  margin: 0;
   white-space: pre-line;
+  max-width: 50rem;
 }
