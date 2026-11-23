@@ -55,7 +55,7 @@ button:disabled {
   flex-direction: column;
   justify-content: flex-end;
   margin: 0px 4px;
-  color: var(--primary-6);
+  color: var(--neutral-8);
 
   filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, .4));
 }

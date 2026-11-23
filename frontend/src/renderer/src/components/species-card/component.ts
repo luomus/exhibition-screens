@@ -15,11 +15,13 @@ const cardTemplate = document.createElement('template');
 cardTemplate.innerHTML = `
   <div id="species-card">
     <div class="hero"></div>
-    <div class="title">
-      <h2></h2>
-      <i id="scientific-name"></i>
+    <div class="text-section">
+      <div class="title">
+        <h2></h2>
+        <i id="scientific-name"></i>
+      </div>
+      <p id="description"></p>
     </div>
-    <p id="description"></p>
   </div>
 `;
 
@@ -50,6 +52,33 @@ const createSpeciesCard = (species: SpeciesCard): HTMLElement => {
 
   el.querySelector('.hero')!.append(createMedia(species.hero));
   return el;
+};
+
+const createFooter = (screen: ScreenData, screenIdx: number, activeSpeciesIdx: number): HTMLElement => {
+  const footer = document.createElement('footer');
+  footer.id = 'species-footer';
+
+  const list = document.createElement('ul');
+  screen.species.forEach((species, speciesIdx) => {
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = `#/screens/${screenIdx}/${speciesIdx}`;
+
+    const thumbnail = document.createElement('img');
+    thumbnail.src = `exhibition-cache://${species.thumbnail.url}`;
+    thumbnail.alt = '';
+    link.append(thumbnail, species.vernacularName[currentLang]);
+
+    if (speciesIdx === activeSpeciesIdx) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
+    item.append(link);
+    list.append(item);
+  });
+
+  footer.append(list);
+  return footer;
 };
 
 export class SpeciesCardComponent extends HTMLElement {
@@ -93,8 +122,15 @@ export class SpeciesCardComponent extends HTMLElement {
 
   update() {
     if (this.screens === undefined || this.screenIdx === undefined || this.speciesIdx === undefined) return;
+    const screen = this.screens[this.screenIdx];
     this.shadow.querySelector('#species-card')?.remove();
-    this.shadow.append(createSpeciesCard(this.screens[this.screenIdx].species[this.speciesIdx]));
+    this.shadow.querySelector('#species-footer')?.remove();
+
+    const footer = createFooter(screen, this.screenIdx, this.speciesIdx);
+    this.shadow.append(createSpeciesCard(screen.species[this.speciesIdx]), footer);
+
+    const activeLink = footer.querySelector('.active')!;
+    footer.scrollLeft = activeLink.getBoundingClientRect().left - footer.getBoundingClientRect().left;
   }
 
   onReturnClick() {

@@ -44,10 +44,17 @@ const renderPage = (el: HTMLElement) => {
   root?.replaceChildren(el);
 };
 
+let renderedPath: string | undefined;
+
 const navigate = () => {
   const fallbackPath = window.config.screenIdx !== undefined ? `/screens/${window.config.screenIdx}` : '/home';
   const path = location.hash.slice(1) || fallbackPath;
-  renderPage(getRoute(path));
+  const page = getRoute(path);
+  renderPage(page);
+  if (path !== renderedPath && page.localName === 'x-species-card') {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+  renderedPath = path;
 }
 
 const root = document.querySelector<HTMLElement>('#app')

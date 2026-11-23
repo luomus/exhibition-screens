@@ -1,6 +1,6 @@
 :host {
-  padding: 24px;
-  display: block;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 img,
@@ -8,7 +8,9 @@ video {
   display: block;
   max-width: 60rem;
   max-height: 65vh;
+  width: 100%;
   object-fit: contain;
+  object-position: left center;
 }
 
 #species-card {
@@ -22,10 +24,14 @@ video {
     ;
   background-image: url('../../assets/topography2.svg');
   background-repeat: repeat;
+  padding: 16px;
     */
   /* border: 2px solid var(--primary-5); */
-  padding: 16px;
   overflow: hidden;
+}
+
+.text-section {
+  margin: 1rem;
 }
 
 .title {
@@ -50,4 +56,54 @@ video {
 #description {
   white-space: pre-line;
   max-width: 50rem;
+}
+
+#species-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  overflow-x: auto;
+  width: 100%;
+  padding: 1.0rem 1.5rem;
+
+  background-color: var(--neutral-2);
+  box-shadow:
+    inset 0px 12px 8px -8px var(--neutral-3),
+    inset 0px -8px 8px -8px var(--neutral-1),
+    0px 1px 4px 0px rgba(0, 0, 0, .4)
+    ;
+  background-image: url('../../assets/topography2.svg');
+  background-repeat: repeat;
+  color: var(--neutral-8);
+}
+
+#species-footer ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+#species-footer ul li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--neutral-8);
+}
+
+#species-footer ul li a.active {
+  box-shadow: inset 1px 2px 12px rgba(0, 0, 0, .4);
+  border: 1px solid var(--primary-4);
+  color: var(--primary-6);
+  background-color: var(--neutral-1);
+}
+
+#species-footer img {
+  width: 4rem;
+  height: 3rem;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 0.25rem;
 }
