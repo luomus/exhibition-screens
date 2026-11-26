@@ -73,7 +73,7 @@ export class ContentCache {
   }
 
   private async loadBackendJson(): Promise<ScreenData[]> {
-    const response = await fetch(`${this.settings.backendUrl}/content/screens.json`, {
+    const response = await fetch(`${this.settings.backendUrl}/screens`, {
       cache: 'no-store',
       redirect: 'error',
       signal: AbortSignal.timeout(120_000),
